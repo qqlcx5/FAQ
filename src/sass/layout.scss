@@ -1,0 +1,232 @@
+@import "normalize-scss/sass/normalize/_import-now.scss";
+@import '../assets/sass/sprite.scss';
+@import "_mixin.scss";
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+h2,
+h3 {
+  color: $titleColor;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+}
+
+html {
+  font-family: "\5FAE\8F6F\96C5\9ED1";
+  color: $fontPrimary;
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  padding-top: 60px;
+
+  @media (max-width: 1024px) {
+    & {
+      font-size: 14px;
+    }
+  }
+
+  &>.main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    background: #ecebf3;
+    overflow: auto;
+  }
+}
+
+.custom-scroll {
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width: 6px;
+    /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 6px;
+    background: rgba(100, 148, 253, .4); // background: hsla(220,4%,58%,.3);
+  }
+
+  &::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    visibility: hidden;
+  }
+}
+
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #6494fd;
+  border-color: #6494fd;
+}
+
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: #6494fd;
+  border-color: #6494fd;
+}
+
+.el-dialog__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+  padding: 0 23px;
+  background: #6494fd;
+  border-radius: 6px 6px 0 0;
+
+  .el-dialog__title {
+    color: #fff;
+    line-height: 1;
+    font-size: 16px;
+  }
+
+  .el-dialog__headerbtn {
+    position: initial;
+
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.el-dialog__footer {
+  text-align: center;
+}
+
+.el-dialog {
+  border-radius: 6px;
+  min-width: 532px;
+
+  .el-input,
+  .el-select,
+  .el-textarea {
+    width: 218px;
+  }
+
+  .el-tabs {
+
+    .el-input,
+    .el-select,
+    .el-textarea {
+      width: 100%;
+    }
+  }
+
+  .el-form {
+    text-align: center;
+  }
+
+  .el-form-item {
+    display: flex;
+    justify-content: center;
+
+    label {
+      float: initial;
+    }
+  }
+
+  .btn-group {
+    margin-top: 30px;
+    text-align: center
+  }
+}
+
+.el-form-item__label::before {
+  display: none;
+}
+
+.el-select-dropdown__item.is-disabled {
+  display: none;
+}
+
+.inlineBlock {
+  display: inline-block;
+
+  .el-form-item__content {
+    display: flex;
+  }
+}
+
+.el-pagination {
+  margin: 30px;
+  margin-left: auto;
+}
+
+.el-table {
+  min-height: 300px;
+}
+
+.html-templet {
+  table {
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+
+  table th,
+  table td {
+    border-bottom: 2px solid #ccc;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    padding: 3px 5px;
+  }
+
+  tr,
+  th {
+    padding: 0;
+    background: inherit;
+  }
+}
+
+.mn-bd-tools {
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.mn-bd-tools_search {
+  display: flex;
+  width: 400px;
+
+  &>div:first-of-type {
+    margin-right: 15px;
+  }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+ 
+input[type="number"] {
+    -moz-appearance: textfield;
+}

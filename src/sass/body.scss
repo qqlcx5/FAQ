@@ -1,0 +1,65 @@
+@import './_mixin.scss';
+
+.m-main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  background: #fff;
+}
+
+.m-mn-title {
+  height: 53px;
+  line-height: 53px;
+  padding-left: 25px;
+  border-bottom: 1px solid $borderBtmColor;
+  color: $titleColor;
+  font-size: 18px;
+}
+
+.m-mn-body {
+  display: flex;
+  flex-direction: column;
+  padding: 17px;
+  flex: 1;
+  min-height: 666px;
+
+  // overflow: auto;
+  // &>div {
+  //   flex-shrink: 0;
+  // }
+}
+
+.mn-bd-hd {
+  flex-shrink: 0;
+}
+
+.el-popover {
+  min-width: 80px;
+
+  .menu {
+    font-size: 12px;
+
+    li {
+      padding: 6px;
+      border-bottom: 1px solid $borderBtmColor;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(26, 26, 26, .05);
+      }
+    }
+  }
+}
+
+.mn-bd-box {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100%;
+
+  ul {
+    height: 100%;
+    overflow: auto;
+  }
+}

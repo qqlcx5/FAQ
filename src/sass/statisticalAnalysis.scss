@@ -1,0 +1,114 @@
+@import 'mixin';
+
+$iconColor1:#2db6f4;
+$iconColor2:#4ad2e7;
+$iconColor3:#ff8c40;
+$iconColor4:#ab96d4;
+
+
+$iconColorLst:(1:$iconColor1, 2:$iconColor2,
+3:$iconColor3,
+4:$iconColor4);
+
+.result-box {
+    width: 90%;
+    border: 1px solid $borderColor;
+    margin-top: 15px;
+    min-width: 770px;
+    border-radius: 6px;
+    flex-shrink: 0;
+
+    header {
+        padding: 15px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        border-top: 1px solid $borderColor;
+        min-height: 140px;
+
+        @each $i,
+        $color in $iconColorLst {
+            li:nth-child(#{$i}) {
+                .bgImg {
+                    background-color: $color;
+                }
+            }
+        }
+    }
+}
+
+.inline-form {
+    display: flex;
+    align-items: center;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+
+    .detail {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        line-height: 1.5;
+
+        .name {
+            color: $fontSecond;
+            font-size: 14px;
+        }
+
+        .value {
+            font-size: 32px;
+        }
+    }
+
+    .bgImg {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        font-size: 26px;
+        color: #fff;
+    }
+}
+
+.chart-panel {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    min-width: 770px;
+    min-height: 310px;
+    margin: 30px 0;
+    justify-content: space-between;
+
+    li {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $borderColor;
+        border-radius: 6px;
+
+        &>header {
+            padding: 15px;
+            flex-shrink: 0;
+        }
+
+        &>div {
+            flex: 1;
+            width: 100%;
+        }
+
+        &:first-of-type {
+            width: 34%;
+        }
+
+        &:nth-of-type(2) {
+            width: 64%;
+        }
+    }
+}

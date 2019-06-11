@@ -1,0 +1,423 @@
+@import '_mixin.scss';
+
+$home_bg: #eff3ff;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-top: 50px;
+  align-items: center;
+  justify-content: center;
+  min-height: 680px;
+  background: $home_bg;
+
+  &>.dialog {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    min-width: 624px;
+    min-height: 740px;
+    background: $home_bg;
+
+    .dlg-bd {
+      display: flex;
+      flex: 1;
+
+      &>main {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      &>aside {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        min-width: 260px;
+        height: 100%;
+        border-left: 1px solid $borderColor;
+        font-size: 14px;
+      }
+    }
+
+    .chat-panel {
+      box-sizing: border-box;
+      display: flex;
+      flex: 1;
+      padding: 0 18px;
+      overflow-y: scroll;
+
+      &>ul {
+        flex: 1;
+
+        li {
+          margin: 15px 0;
+        }
+      }
+    }
+
+    .input-field {
+      box-sizing: border-box;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 30%;
+      border-top: 1px solid $borderColor;
+      flex-shrink: 0;
+      padding: 0 18px;
+
+      &>span {
+        flex: 1;
+      }
+
+      .tip-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+      }
+
+      .tipImg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .tip {
+        // position: absolute;
+        // top: 0;
+        // right: 18px;
+        margin: 0;
+        text-align: right;
+        font-size: 12px;
+
+
+
+
+
+        a {
+          color: $primary;
+        }
+
+        .el-button {
+          margin-right: 15px;
+          color: inherit;
+        }
+      }
+
+      textarea {
+        box-sizing: border-box;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        padding: 5px 15px;
+        border-radius: 6px;
+        border: 1px solid $borderColor;
+        background: $borderBtmColor;
+        resize: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .btn-send {
+      width: 15%;
+      margin: 10px 0 10px auto;
+
+      .el-button {
+        width: 100%;
+      }
+    }
+
+    .chart-tool {
+      flex: 1;
+
+      .icon-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 128px;
+        border-bottom: 1px solid $borderColor;
+
+        li {
+          cursor: pointer;
+        }
+      }
+
+      .faq-lst {
+        padding: 15px;
+        font-size: 12px;
+        max-height: 394px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        li {
+          margin: 10px 0;
+          color: #888;
+          line-height: 1.4;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.qrcode-box {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 30%;
+  flex-shrink: 0;
+  font-size: 12px;
+
+  .cut-off {
+    height: 40%;
+    border-right: 1px solid $borderColor;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+      margin: 4px 0;
+      text-align: center;
+    }
+  }
+}
+
+.dlg-hd {
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 62px;
+  padding-left: 115px;
+  background: $primary;
+  color: #fff;
+
+  .w-icon-people {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
+  }
+
+  .w-icon-logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 40px;
+
+    &::after {
+      content: '|';
+      position: absolute;
+      right: -20px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+.msg-box {
+  display: flex;
+  position: relative;
+  margin: 30px 0;
+
+  .head {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+
+
+  .text-box {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid $borderColor;
+    border-radius: 6px;
+    background: #fff;
+    min-width: 142px;
+    max-width: 55%;
+    min-height: 42px;
+
+    p,
+    pre {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      word-break: break-all;
+      font-family: inherit;
+      white-space: pre-wrap
+    }
+
+    time {
+      position: absolute;
+      bottom: -20px;
+      font-size: 12px;
+      color: $fontSecond;
+    }
+
+    .satisfaction {
+      margin: 15px 0 0 auto;
+
+      &:empty {
+        &:after {
+          content: '感谢您的评价~';
+          font-size: 12px;
+          color: $fontSecond;
+        }
+      }
+    }
+  }
+
+  .msg-status {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 0;
+    color: $placeholder;
+
+    .el-icon-warning {
+      color: #f56c6c;
+    }
+  }
+}
+
+.msg-left {
+  .text-box {
+    margin-left: 15px;
+
+    .name {
+      padding-bottom: 6px;
+      color: #ff8030;
+    }
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: -14px;
+      width: 0;
+      height: 0;
+      border-width: 7px 13px 7px 0;
+      border-style: solid;
+      border-color: transparent $borderColor transparent transparent;
+    }
+
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: -12px;
+      width: 0;
+      height: 0;
+      border-width: 6px 12px 6px 0;
+      border-style: solid;
+      border-color: transparent #fff transparent transparent;
+    }
+  }
+}
+
+.msg-right {
+  flex-direction: row-reverse;
+
+  .text-box {
+    margin-right: 15px;
+    background: #6ea8e3;
+    color: #fff;
+
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: 14px;
+      right: -12px;
+      width: 0;
+      height: 0;
+      border-width: 7px 0 7px 13px;
+      border-style: solid;
+      border-color: transparent transparent transparent #6ea8e3;
+    }
+  }
+}
+
+.tip-question {
+  position: absolute;
+  bottom: 228px;
+  left: 40px;
+  min-width: 140px;
+  padding: 6px;
+  border: 1px solid $borderColor;
+  background: #fff;
+  font-size: 12px;
+  border-radius: 6px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: -16px;
+    border-style: solid;
+    border-width: 16px 8px 0 8px;
+    border-color: $borderColor transparent transparent transparent;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    bottom: -14px;
+    border-style: solid;
+    border-width: 15px 7px 0 7px;
+    border-color: #fff transparent transparent transparent;
+  }
+
+  ul {
+    height: 100%;
+
+    li {
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.tip-lst {
+  font-size: 12px;
+
+  li {
+    padding: 10px 0 5px;
+    cursor: pointer;
+
+    &:hover {
+      background: $home_bg;
+    }
+  }
+}

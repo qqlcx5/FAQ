@@ -1,0 +1,79 @@
+@import '_mixin.scss';
+.get-code{
+    .el-input, .el-dialog .el-select, .el-textarea{
+        width: 100%;
+    }
+    .el-tabs{
+        display: flex;
+        flex-direction: column;
+        
+        // margin-bottom: 10px;
+        .el-tabs__header{
+            flex-shrink: 0;
+        }
+        .el-tabs__content{
+            // flex:1;
+            &>div{
+                // height: 100%;
+            }
+        }
+    }
+    .step{
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        margin-bottom: 15px;
+        .step-hd{
+            flex-shrink: 0;
+            margin-bottom: 15px;
+        }
+    }
+    .step-skin{
+        .img-box{
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid $borderColor;
+            border-radius: 6px;
+            &>label{
+                display: flex;
+            }
+        }
+        img{
+            width: 180px;
+        }
+        dt{
+            margin: 6px 0;
+        }
+        dd{
+            margin:15px 0;
+        }
+    }
+    .step-num{
+        display: inline-block;
+        padding: .2em .8em;
+        margin-right: 1em;
+        background:$primary;
+        color: #fff;
+        border-radius: 50%;
+    }
+    .step-pannel{
+        &>div:not(:first-of-type){
+            margin-top: 15px;
+        }
+        .icon-radio-group{
+            display: flex;
+            .el-radio{
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+
+    .w-e-text-container{
+        height: 170px !important;
+        overflow: auto;
+    }
+    .fixed-width{
+        width: 620px;
+    }
+}
