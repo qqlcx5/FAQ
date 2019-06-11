@@ -15,6 +15,8 @@
 		1. 接受消息，如果是同一用户，重叠消息，显示最新消息
 		2. 获取用户的IP、浏览器、操作系统信息
 		3. 查看用户和同事的对话消息
+  - 聊天部分展示
+  ![faq](https://github.com/qqlcx5/FAQ/blob/master/src/assets/img/faq.gif)
   - 后台管理系统
     1. 具有权限功能，导航守卫阶段拦截，权限用户信息存储在 本地 ``sessionStorage``
     2. 富文本采用了 ``wangeditor``，拆分了获取代码的组件
